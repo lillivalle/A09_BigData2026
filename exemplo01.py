@@ -4,27 +4,34 @@
 # enquanto o "for" é um loop de interação/repetição
 # "Match/case" Avalia a opção escolhida pelo usuário e chama apenas a função correspondente, salvando o retorno na variável 'resultado'
 
-def dobro(n): #aqui só recebe o parâmetro
-    d = n * 2
-    return d
+from auxiliar.operacoes import dobro, triplo, quadrado, metade
+import random # 'random' vem de aleatório
+import os
+# def dobro(n): #aqui só recebe o parâmetro
+#     d = n * 2
+#     return d
 
 
-def triplo(n):
-    t = n * 3
-    return t
+# def triplo(n):
+#     t = n * 3
+#     return t
 
 
-def quadrado(n):
-    q = n **2
-    return q
+# def quadrado(n):
+#     q = n **2
+#     return q
 
 
-def metade(n):
-    m = n / 2
-    return m
+# def metade(n):
+#     m = n / 2
+#     return m
 
 #Início da execução
-num1 = int(input('\nDigite um número: '))
+os.system('cls')
+#num1 = int(input('\nDigite um número: '))
+num1 = random.randint(1,50)
+print(f'O número aleatório sorteado é: {num1}')
+
 
 print('\n #### MENU DE OPÇÕES ####')
 print(30 * '=')
@@ -42,7 +49,7 @@ match opcao:
     case 4:
         resultado = metade(num1)
 
-print(f'\n O resultado da operação deu: {resultado}')
+print(f'\n O resultado da operação deu: {resultado:.2f}')
 
 # resultado_dobro = dobro(num1)   #para comentar tudo seleciona e colocar ctrl + ;
 # resultado_triplo = triplo(num1)
